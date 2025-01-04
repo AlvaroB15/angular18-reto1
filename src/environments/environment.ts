@@ -1,5 +1,5 @@
-// export const environment = {
-//   production: false,
-//   URL_BASE_FASTIFY: process.env['NG_APP_URL_BASE_FASTIFY'] || "",
-//   URL_BASE_EXPRESS: process.env['NG_APP_URL_BASE_EXPRESS'] || "",
-// };
+const getEnvVars = () => ({
+  URL_ENDPOINT: import.meta.env?.['NG_APP_URL_ENDPOINT'],
+});
+
+export const environment = getEnvVars();
